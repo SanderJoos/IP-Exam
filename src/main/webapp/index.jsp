@@ -11,12 +11,7 @@
                 $http.get("http://193.191.187.14:10688/IP-Rest/author")
                 .then(function (response) {$scope.authors = response.data;});
             });
-            var app2 = angular.module('bookApp', []);
-            app2.controller('bookController', function($scope, $http) {
-                $http.get("http://193.191.187.14:10688/IP-Rest/book")
-                .then(function (response) {$scope.books = response.data;});
-            });
-	</script>   
+        </script>  
         <title>Get all the data</title>
     </head>
     <body onload="loadBooks(); loadAuthors()">
@@ -28,14 +23,6 @@
                     <li>{{author.name}} ; {{author.lastName}}</li>
                 </ul>
             </div>
-        </div>        
-        <div ng-app="bookApp">
-            <div ng-controller="bookController">
-                <ul ng-repeat="book in books">
-                    <li>{{book.title}} ; {{book.ISBN}} ; {{book.score}}</li>
-                </ul>
-            </div>
-        </div>
-            
+        </div>                
     </body>
 </html>
