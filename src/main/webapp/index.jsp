@@ -11,7 +11,7 @@
                 $http.get("http://193.191.187.14:10688/IP-Rest/author")
                 .then(function (response) {$scope.authors = response.data;});
             });
-        </script>  
+	</script>   
         <title>Get all the data</title>
     </head>
     <body onload="loadBooks(); loadAuthors()">
@@ -23,6 +23,6 @@
                     <li>{{author.name}} ; {{author.lastName}}</li>
                 </ul>
             </div>
-        </div>                
+        </div>        
     </body>
 </html>
